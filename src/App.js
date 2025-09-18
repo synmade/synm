@@ -1,21 +1,35 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import DecryptedText from "./DecryptedText";
 import MagicBento from "./MagicBento";
+import Dock from "./Dock";
+import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
 import "./App.css";
 
 // Layout (shared across all pages)
 function Layout({ children }) {
+  const navigate = useNavigate();
+
+  // Dock items with routing
+  const items = [
+    { icon: <VscHome size={18} />, label: 'Home', onClick: () => navigate('/') },
+    { icon: <VscArchive size={18} />, label: 'About', onClick: () => navigate('/about') },
+    { icon: <VscAccount size={18} />, label: 'Profile', onClick: () => alert('Profile!') },
+    { icon: <VscSettingsGear size={18} />, label: 'Settings', onClick: () => alert('Settings!') },
+  ];
+
   return (
     <div className="App">
-      {/* Navbar */}
-      <nav className="navbar">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
-
       {/* Page Content */}
       <main>{children}</main>
+
+      {/* Dock as bottom navbar */}
+      <Dock
+        items={items}
+        panelHeight={68}
+        baseItemSize={50}
+        magnification={70}
+      />
     </div>
   );
 }
@@ -23,39 +37,35 @@ function Layout({ children }) {
 // Home Page
 function Home() {
   return (
-    <>
-      <section className="hero">
-        <h1>Welcome.</h1>
-        <DecryptedText text="Learn more about Synmade below." />
+    <section className="hero">
+      <h1>Welcome.</h1>
+      <DecryptedText text="Learn more about synmade below." />
 
-
-        {/* MagicBento Interactive Cards */}
-        <MagicBento
-          textAutoHide={true}
-          enableStars={true}
-          enableSpotlight={true}
-          enableBorderGlow={true}
-          enableTilt={true}
-          enableMagnetism={true}
-          clickEffect={true}
-          spotlightRadius={300}
-          particleCount={12}
-          glowColor="132, 0, 255"
-        />
-      </section>
-    </>
+      {/* MagicBento Interactive Cards */}
+      <MagicBento
+        textAutoHide={true}
+        enableStars={true}
+        enableSpotlight={true}
+        enableBorderGlow={true}
+        enableTilt={true}
+        enableMagnetism={true}
+        clickEffect={true}
+        spotlightRadius={300}
+        particleCount={12}
+        glowColor="132, 0, 255"
+      />
+    </section>
   );
 }
-
 
 // About Page
 function About() {
   return (
     <>
       <section className="hero">
-        <h1>About SYNmade</h1>
+        <h1>About synmade</h1>
         <p>
-          I’m SYNmade — a creator who loves experimenting. 
+          I’m synmade — a creator who loves experimenting. 
           Whether it’s music, Roblox games, or web design, 
           I’m always creating something new for fun.
         </p>
@@ -101,22 +111,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Layout>
-              <Home />
-            </Layout>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <Layout>
-              <About />
-            </Layout>
-          }
-        />
+        <Route path="/" element={<Layout><Home /></Layout>} />
+        <Route path="/about" element={<Layout><About /></Layout>} />
       </Routes>
     </BrowserRouter>
   );
