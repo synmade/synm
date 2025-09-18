@@ -6,47 +6,53 @@ import Dock from "./Dock";
 import Dither from "./Dither"; // import Dither
 import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
 import "./App.css";
+import StaggeredMenu from "./StaggeredMenu";
 
-// Layout (shared across all pages)
 function Layout({ children }) {
   const navigate = useNavigate();
 
-  const items = [
-    { icon: <VscHome size={18} />, label: 'Home', onClick: () => navigate('/') },
-    { icon: <VscArchive size={18} />, label: 'About', onClick: () => navigate('/about') },
-    { icon: <VscAccount size={18} />, label: 'Profile', onClick: () => alert('Under construction!') },
-    { icon: <VscSettingsGear size={18} />, label: 'Settings', onClick: () => alert('Under construction!') },
+  // Menu links
+  const menuItems = [
+    { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
+    { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
+    { label: 'Services', ariaLabel: 'View our services', link: '/services' },
+    { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
+  ];
+
+  // Social links
+  const socialItems = [
+    { label: 'Twitter', link: 'https://twitter.com' },
+    { label: 'GitHub', link: 'https://github.com' },
+    { label: 'LinkedIn', link: 'https://linkedin.com' }
   ];
 
   return (
-    <div className="App" style={{ position: 'relative', overflow: 'hidden' }}>
-      {/* Dither Background */}
-      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
-        <Dither
-          waveColor={[0.4, 0, 0.7]}
-          disableAnimation={false}
-          enableMouseInteraction={true}
-          mouseRadius={0.3}
-          colorNum={4}
-          waveAmplitude={0.3}
-          waveFrequency={3}
-          waveSpeed={0.05}
-        />
-      </div>
-
-      {/* Page Content */}
-      <main>{children}</main>
-
-      {/* Dock as bottom navbar */}
-      <Dock
-        items={items}
-        panelHeight={68}
-        baseItemSize={50}
-        magnification={70}
+    <div className="App">
+      {/* StaggeredMenu always available */}
+      <StaggeredMenu
+        position="right"
+        items={menuItems}
+        socialItems={socialItems}
+        displaySocials={true}
+        displayItemNumbering={true}
+        menuButtonColor="var(--purple-primary)"
+        openMenuButtonColor="var(--white)"
+        changeMenuColorOnOpen={true}
+        colors={['#B19EEF', '#5227FF']}
+        logoUrl="/logo.svg"
+        accentColor="var(--purple-primary)"
+        onMenuOpen={() => console.log('Menu opened')}
+        onMenuClose={() => console.log('Menu closed')}
       />
+
+      {/* Page content */}
+      <main>{children}</main>
     </div>
   );
 }
+
+export default Layout;
+
 
 // Home Page
 function Home() {
