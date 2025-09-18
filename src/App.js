@@ -2,33 +2,39 @@ import React from "react";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import DecryptedText from "./DecryptedText";
 import MagicBento from "./MagicBento";
-import Dock from "./Dock";
+//import Dock from "./Dock";
 import Dither from "./Dither"; // import Dither
-import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
+//import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
 import "./App.css";
 import StaggeredMenu from "./StaggeredMenu";
 
 function Layout({ children }) {
-  const navigate = useNavigate();
-
-  // Menu links
-  const menuItems = [
-    { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
-    { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
-    { label: 'Services', ariaLabel: 'View our services', link: '/services' },
-    { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
-  ];
-
-  // Social links
-  const socialItems = [
-    { label: 'Twitter', link: 'https://twitter.com' },
-    { label: 'GitHub', link: 'https://github.com' },
-    { label: 'LinkedIn', link: 'https://linkedin.com' }
-  ];
-
   return (
-    <div className="App">
-      {/* StaggeredMenu always available */}
+    <div className="App" style={{ position: 'relative', overflow: 'hidden' }}>
+      {/* Dither background */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: -1
+        }}
+      >
+        <Dither
+          waveColor={[0.4, 0, 0.7]}
+          disableAnimation={false}
+          enableMouseInteraction={true}
+          mouseRadius={0.3}
+          colorNum={4}
+          waveAmplitude={0.3}
+          waveFrequency={3}
+          waveSpeed={0.05}
+        />
+      </div>
+
+      {/* StaggeredMenu */}
       <StaggeredMenu
         position="right"
         items={menuItems}
@@ -50,7 +56,6 @@ function Layout({ children }) {
     </div>
   );
 }
-
 
 // Home Page
 function Home() {
