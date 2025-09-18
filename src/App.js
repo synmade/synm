@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import DecryptedText from "./DecryptedText";
 import MagicBento from "./MagicBento";
 import Dock from "./Dock";
+import Dither from "./Dither"; // import Dither
 import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
 import "./App.css";
 
@@ -10,7 +11,6 @@ import "./App.css";
 function Layout({ children }) {
   const navigate = useNavigate();
 
-  // Dock items with routing
   const items = [
     { icon: <VscHome size={18} />, label: 'Home', onClick: () => navigate('/') },
     { icon: <VscArchive size={18} />, label: 'About', onClick: () => navigate('/about') },
@@ -19,7 +19,21 @@ function Layout({ children }) {
   ];
 
   return (
-    <div className="App">
+    <div className="App" style={{ position: 'relative', overflow: 'hidden' }}>
+      {/* Dither Background */}
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
+        <Dither
+          waveColor={[0.5, 0.5, 0.5]}
+          disableAnimation={false}
+          enableMouseInteraction={true}
+          mouseRadius={0.3}
+          colorNum={4}
+          waveAmplitude={0.3}
+          waveFrequency={3}
+          waveSpeed={0.05}
+        />
+      </div>
+
       {/* Page Content */}
       <main>{children}</main>
 
@@ -41,7 +55,6 @@ function Home() {
       <h1>Welcome.</h1>
       <DecryptedText text="Learn more about synmade below." />
 
-      {/* MagicBento Interactive Cards */}
       <MagicBento
         textAutoHide={true}
         enableStars={true}
@@ -70,7 +83,6 @@ function About() {
           I’m always creating something new for fun.
         </p>
 
-        {/* MagicBento Interactive Text */}
         <MagicBento
           textAutoHide={true}
           enableStars={true}
