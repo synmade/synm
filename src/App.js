@@ -1,9 +1,11 @@
 import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import DecryptedText from "./DecryptedText";
 import StarBorder from "./StarBorder";
 import "./App.css";
 
-function App() {
+// Home Page
+function Home() {
   return (
     <div className="App">
       {/* Hero Section */}
@@ -46,6 +48,40 @@ function App() {
         />
       </section>
     </div>
+  );
+}
+
+// About Page
+function About() {
+  return (
+    <div className="App">
+      <section className="about">
+        <h1>About SYNmade</h1>
+        <p>
+          SYNmade is a creative project exploring animations, interactivity, and
+          custom web design.
+        </p>
+      </section>
+    </div>
+  );
+}
+
+// Main App
+function App() {
+  return (
+    <BrowserRouter>
+      {/* Navbar */}
+      <nav className="navbar">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </nav>
+
+      {/* Page Routes */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
