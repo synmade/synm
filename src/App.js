@@ -25,22 +25,12 @@ function Layout({ children }) {
 function Home() {
   return (
     <>
-      {/* Hero Section */}
       <section className="hero">
-        <h1>Welcome to SYNmade</h1>
-        <p>Hover the text to decrypt:</p>
-        <DecryptedText text="Hover me!" />
+        <h1>Welcome.</h1>
+        <DecryptedText text="Learn more about Synmade below." />
 
-        <StarBorder
-          as="button"
-          className="cta-button"
-          color="cyan"
-          speed="5s"
-        >
-          Explore
-        </StarBorder>
 
-        {/* MagicBento Interactive Text */}
+        {/* MagicBento Interactive Cards */}
         <MagicBento
           textAutoHide={true}
           enableStars={true}
@@ -52,37 +42,12 @@ function Home() {
           spotlightRadius={300}
           particleCount={12}
           glowColor="132, 0, 255"
-        >
-          Explore My Creations
-        </MagicBento>
-      </section>
-
-      {/* Features Section */}
-      <section className="features">
-        <h2>Custom Animations</h2>
-        <DecryptedText
-          text="Customize me"
-          speed={100}
-          maxIterations={20}
-          characters="ABCD1234!?"
-          className="revealed"
-          parentClassName="all-letters"
-          encryptedClassName="encrypted"
-        />
-      </section>
-
-      {/* Animate On View Section */}
-      <section className="animate-section">
-        <h2>In View Animations</h2>
-        <DecryptedText
-          text="This text animates when in view"
-          animateOn="view"
-          revealDirection="center"
         />
       </section>
     </>
   );
 }
+
 
 // About Page
 function About() {
