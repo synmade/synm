@@ -20,8 +20,22 @@ const cardData = [
     description: 'From immersive Roblox games to dynamic websites and music projects, I craft experiences that mix technology, design, and fun.',
     label: 'My Work'
   },
-  // ...your other existing cards
+  // New card 1
+  {
+    color: '#060010',
+    title: 'My Skills',
+    description: 'Proficient in React, GSAP animations, Roblox Lua, and audio production. I enjoy combining these skills into interactive and engaging projects.',
+    label: 'Skills'
+  },
+  // New card 2
+  {
+    color: '#060010',
+    title: 'Contact Me',
+    description: 'Reach out for collaborations, projects, or just to say hi! I’m always excited to connect with fellow creators and enthusiasts.',
+    label: 'Get In Touch'
+  }
 ];
+
 
 const createParticleElement = (x, y, color = DEFAULT_GLOW_COLOR) => {
   const el = document.createElement('div');
