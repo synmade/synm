@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import DecryptedText from "./DecryptedText";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Hero Section */}
+      <section className="hero">
+        <h1>Welcome to SYNmade</h1>
+        <p>Hover the text to decrypt:</p>
+        <DecryptedText text="Hover me!" />
+        <button className="cta-button">Explore</button>
+      </section>
+
+      {/* Features Section */}
+      <section className="features">
+        <h2>Custom Animations</h2>
+        <DecryptedText
+          text="Customize me"
+          speed={100}
+          maxIterations={20}
+          characters="ABCD1234!?"
+          className="revealed"
+          parentClassName="all-letters"
+          encryptedClassName="encrypted"
+        />
+      </section>
+
+      {/* Animate On View Section */}
+      <section className="animate-section">
+        <h2>In View Animations</h2>
+        <DecryptedText
+          text="This text animates when in view"
+          animateOn="view"
+          revealDirection="center"
+        />
+      </section>
     </div>
   );
 }
