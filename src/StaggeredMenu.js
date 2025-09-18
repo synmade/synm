@@ -315,7 +315,7 @@ export const StaggeredMenu = ({
   return (
     <div
       className={(className ? className + ' ' : '') + 'staggered-menu-wrapper'}
-      style={accentColor ? { ['--sm-accent']: accentColor } : undefined}
+      style={accentColor ? { '--sm-accent': accentColor } : undefined}
       data-position={position}
       data-open={open || undefined}
     >
@@ -368,7 +368,7 @@ export const StaggeredMenu = ({
 
       <aside id="staggered-menu-panel" ref={panelRef} className="staggered-menu-panel" aria-hidden={!open}>
         <div className="sm-panel-inner">
-          <ul className="sm-panel-list" role="list" data-numbering={displayItemNumbering || undefined}>
+         <ul className="sm-socials-list" role="list">
             {items && items.length ? (
               items.map((it, idx) => (
                 <li className="sm-panel-itemWrap" key={it.label + idx}>
