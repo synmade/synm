@@ -72,10 +72,11 @@ function About() {
   return (
     <>
       <section className="hero">
-        <h1>About SYNmade</h1>
+        <h1>About Synmade</h1>
         <p>
-          SYNmade is a creative project exploring animations, interactivity, and
-          custom web design.
+          I’m Synmade — a creator who loves experimenting. 
+          Whether it’s making music, building Roblox games, or 
+          designing websites, I’m always creating something new for fun.
         </p>
       </section>
     </>
