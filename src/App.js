@@ -58,7 +58,7 @@ function Layout({ children }) {
         openMenuButtonColor="var(--white)"
         changeMenuColorOnOpen={true}
         colors={['#B19EEF', '#5227FF']}
-        logoUrl="/logo.svg"
+        logoUrl="/synlogo.svg"
         accentColor="var(--purple-primary)"
         onMenuOpen={() => console.log('Menu opened')}
         onMenuClose={() => console.log('Menu closed')}
