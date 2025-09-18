@@ -10,40 +10,17 @@ const MOBILE_BREAKPOINT = 768;
 const cardData = [
   {
     color: '#060010',
-    title: 'Analytics',
-    description: 'Track user behavior',
-    label: 'Insights'
+    title: 'Who I Am',
+    description: 'I’m synmade — a creator driven by curiosity and creativity, always exploring new ways to make interactive experiences, music, and games.',
+    label: 'About Me'
   },
   {
     color: '#060010',
-    title: 'Dashboard',
-    description: 'Centralized data view',
-    label: 'Overview'
+    title: 'What I Do',
+    description: 'From immersive Roblox games to dynamic websites and music projects, I craft experiences that mix technology, design, and fun.',
+    label: 'My Work'
   },
-  {
-    color: '#060010',
-    title: 'Collaboration',
-    description: 'Work together seamlessly',
-    label: 'Teamwork'
-  },
-  {
-    color: '#060010',
-    title: 'Automation',
-    description: 'Streamline workflows',
-    label: 'Efficiency'
-  },
-  {
-    color: '#060010',
-    title: 'Integration',
-    description: 'Connect favorite tools',
-    label: 'Connectivity'
-  },
-  {
-    color: '#060010',
-    title: 'Security',
-    description: 'Enterprise-grade protection',
-    label: 'Protection'
-  }
+  // ...your other existing cards
 ];
 
 const createParticleElement = (x, y, color = DEFAULT_GLOW_COLOR) => {
