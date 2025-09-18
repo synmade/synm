@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import DecryptedText from "./DecryptedText";
 import StarBorder from "./StarBorder";
+import MagicBento from "./MagicBento";
 import "./App.css";
 
 // Layout (shared across all pages)
@@ -38,6 +39,22 @@ function Home() {
         >
           Explore
         </StarBorder>
+
+        {/* MagicBento Interactive Text */}
+        <MagicBento
+          textAutoHide={true}
+          enableStars={true}
+          enableSpotlight={true}
+          enableBorderGlow={true}
+          enableTilt={true}
+          enableMagnetism={true}
+          clickEffect={true}
+          spotlightRadius={300}
+          particleCount={12}
+          glowColor="132, 0, 255"
+        >
+          Explore My Creations
+        </MagicBento>
       </section>
 
       {/* Features Section */}
@@ -72,11 +89,43 @@ function About() {
   return (
     <>
       <section className="hero">
-        <h1>About Synmade</h1>
+        <h1>About SYNmade</h1>
         <p>
-          I’m Synmade — a creator who loves experimenting. 
-          Whether it’s making music, building Roblox games, or 
-          designing websites, I’m always creating something new for fun.
+          I’m SYNmade — a creator who loves experimenting. 
+          Whether it’s music, Roblox games, or web design, 
+          I’m always creating something new for fun.
+        </p>
+
+        {/* MagicBento Interactive Text */}
+        <MagicBento
+          textAutoHide={true}
+          enableStars={true}
+          enableSpotlight={true}
+          enableBorderGlow={true}
+          enableTilt={true}
+          enableMagnetism={true}
+          clickEffect={true}
+          spotlightRadius={300}
+          particleCount={12}
+          glowColor="132, 0, 255"
+        >
+          Discover My Projects
+        </MagicBento>
+      </section>
+
+      <section className="features">
+        <h2>What I Create</h2>
+        <p>
+          From interactive websites to immersive games, I focus on engaging 
+          experiences that mix creativity and technology.
+        </p>
+      </section>
+
+      <section className="animate-section">
+        <h2>My Philosophy</h2>
+        <p>
+          Learning by doing and sharing my creations inspires both myself 
+          and others to push creative boundaries.
         </p>
       </section>
     </>
