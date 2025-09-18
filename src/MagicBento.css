@@ -12,14 +12,13 @@
 
 .card-grid {
   display: grid;
-  gap: 3rem; /* bigger space between cards */
-  padding: 3rem; /* more space around the grid */
+  gap: 3rem; /* space between cards */
+  padding: 3rem;
   width: 100%;
-  max-width: 1400px; /* wider max-width for large screens */
-  margin: 0 auto; /* center the grid */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsive, cards take at least 300px */
+  max-width: 1400px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-
 
 .card {
   display: flex;
@@ -29,11 +28,10 @@
   aspect-ratio: 4/3;
   min-height: 200px;
   width: 100%;
-  max-width: 100%;
   padding: 1.25em;
   border-radius: 20px;
-  border: 1px solid var(--border-color);
-  background: linear-gradient(135deg, #0b0b0b, #1a1a1a); /* jet black → midnight black */
+  border: 1px solid var(--purple-border);
+  background: linear-gradient(135deg, #060010, #1a001a); /* deep → dark purple */
   font-weight: 300;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -44,10 +42,9 @@
   --glow-radius: 200px;
 }
 
-
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(132, 0, 255, 0.15);
 }
 
 .card__header,
@@ -68,24 +65,21 @@
 
 .card__label {
   font-size: 16px;
-}
-
-.card__title,
-.card__description {
-  --clamp-title: 1;
-  --clamp-desc: 2;
+  color: var(--purple-primary);
 }
 
 .card__title {
   font-weight: 400;
   font-size: 16px;
   margin: 0 0 0.25em;
+  color: var(--purple-primary);
 }
 
 .card__description {
   font-size: 12px;
   line-height: 1.2;
   opacity: 0.9;
+  color: var(--white);
 }
 
 .card--text-autohide .card__title,
@@ -98,53 +92,10 @@
 
 .card--text-autohide .card__title {
   -webkit-line-clamp: var(--clamp-title);
-  line-clamp: var(--clamp-title);
 }
 
 .card--text-autohide .card__description {
   -webkit-line-clamp: var(--clamp-desc);
-  line-clamp: var(--clamp-desc);
-}
-
-@media (max-width: 599px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-    width: 90%;
-    margin: 0 auto;
-    padding: 0.5em;
-  }
-
-  .card {
-    width: 100%;
-    min-height: 180px;
-  }
-}
-
-@media (min-width: 600px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .card-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .card:nth-child(3) {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-
-  .card:nth-child(4) {
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 2;
-  }
-
-  .card:nth-child(6) {
-    grid-column: 4;
-    grid-row: 3;
-  }
 }
 
 /* Border glow effect */
@@ -155,8 +106,8 @@
   padding: 6px;
   background: radial-gradient(
     var(--glow-radius) circle at var(--glow-x) var(--glow-y),
-    rgba(132, 0, 255, calc(var(--glow-intensity) * 0.9)) 0%,
-    rgba(132, 0, 255, calc(var(--glow-intensity) * 0.4)) 40%,
+    rgba(132, 0, 255, calc(var(--glow-intensity) * 0.7)) 0%,
+    rgba(132, 0, 255, calc(var(--glow-intensity) * 0.3)) 40%,
     transparent 70%
   );
   border-radius: inherit;
@@ -189,7 +140,7 @@
     0 0 40px rgba(132, 0, 255, 0.4);
 }
 
-
+/* Particle effect */
 .particle-container {
   position: relative;
   overflow: hidden;
@@ -209,7 +160,7 @@
 
 .particle-container:hover {
   box-shadow:
-    0 4px 20px rgba(46, 24, 78, 0.2),
+    0 4px 20px rgba(132, 0, 255, 0.2),
     0 0 30px var(--purple-glow);
 }
 
