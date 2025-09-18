@@ -36,7 +36,7 @@ function Layout({ children }) {
         }}
       >
         <Dither
-          waveColor={[0.4, 0, 0.7]}
+          waveColor={[0.3, 0, 0.6]}
           disableAnimation={false}
           enableMouseInteraction={true}
           mouseRadius={0.3}
@@ -104,21 +104,7 @@ function About() {
           Whether it’s music, Roblox games, or web design, 
           I’m always creating something new for fun.
         </p>
-
-        <MagicBento
-          textAutoHide={true}
-          enableStars={true}
-          enableSpotlight={true}
-          enableBorderGlow={true}
-          enableTilt={true}
-          enableMagnetism={true}
-          clickEffect={true}
-          spotlightRadius={300}
-          particleCount={12}
-          glowColor="132, 0, 255"
-        >
-          Discover My Projects
-        </MagicBento>
+    
       </section>
 
       <section className="features">
