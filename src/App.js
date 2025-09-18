@@ -14,8 +14,8 @@ function Layout({ children }) {
   const items = [
     { icon: <VscHome size={18} />, label: 'Home', onClick: () => navigate('/') },
     { icon: <VscArchive size={18} />, label: 'About', onClick: () => navigate('/about') },
-    { icon: <VscAccount size={18} />, label: 'Profile', onClick: () => alert('Profile!') },
-    { icon: <VscSettingsGear size={18} />, label: 'Settings', onClick: () => alert('Settings!') },
+    { icon: <VscAccount size={18} />, label: 'Profile', onClick: () => alert('Under construction!') },
+    { icon: <VscSettingsGear size={18} />, label: 'Settings', onClick: () => alert('Under construction!') },
   ];
 
   return (
