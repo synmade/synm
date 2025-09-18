@@ -54,11 +54,11 @@ function Layout({ children }) {
         socialItems={socialItems}
         displaySocials={true}
         displayItemNumbering={true}
-        menuButtonColor="var(--purple-primary)"
-        openMenuButtonColor="var(--white)"
+        menuButtonColor="var(--white)"
+        openMenuButtonColor="var(--purple-primary)"
         changeMenuColorOnOpen={true}
         colors={['#B19EEF', '#5227FF']}
-        logoUrl="/src/logo.svg"
+        logoUrl="https://raw.githubusercontent.com/synmade/synm/refs/heads/main/src/synlogo.svg"
         accentColor="var(--purple-primary)"
         onMenuOpen={() => console.log('Menu opened')}
         onMenuClose={() => console.log('Menu closed')}
