@@ -12,7 +12,6 @@ function App() {
         <p>Hover the text to decrypt:</p>
         <DecryptedText text="Hover me!" />
 
-        {/* StarBorder Explore Button */}
         <StarBorder
           as="button"
           className="cta-button"
