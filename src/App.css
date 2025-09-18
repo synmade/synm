@@ -5,6 +5,7 @@
   min-height: 100vh;
 }
 
+/* Hero Section */
 .hero {
   display: flex;
   flex-direction: column;
@@ -14,6 +15,7 @@
   text-align: center;
 }
 
+/* StarBorder Explore Button */
 .cta-button {
   background: transparent; /* no background */
   border: none; /* StarBorder handles the border */
@@ -22,13 +24,9 @@
   font-size: 1.2rem;
   cursor: pointer;
   color: #fff; /* text color */
-  transition: 0.3s;
 }
 
-.cta-button:hover {
-  background: #ff1a40;
-}
-
+/* Features & Animate Sections */
 .features, .animate-section {
   padding: 4rem 2rem;
   text-align: center;
