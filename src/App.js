@@ -1,6 +1,6 @@
 import React from "react";
 import DecryptedText from "./DecryptedText";
-import StarBorder from "./StarBorder"; // make sure this path is correct
+import StarBorder from "./StarBorder";
 import "./App.css";
 
 function App() {
@@ -8,9 +8,9 @@ function App() {
     <div className="App">
       {/* Hero Section */}
       <section className="hero">
-        <h1>Synmade</h1>
+        <h1>Welcome to SYNmade</h1>
         <p>Hover the text to decrypt:</p>
-        <DecryptedText text="Welcome to Synmade's home page!" />
+        <DecryptedText text="Hover me!" />
 
         {/* StarBorder Explore Button */}
         <StarBorder
@@ -30,7 +30,7 @@ function App() {
           text="Customize me"
           speed={100}
           maxIterations={20}
-          characters="synmade is that you!?"
+          characters="ABCD1234!?"
           className="revealed"
           parentClassName="all-letters"
           encryptedClassName="encrypted"
@@ -41,7 +41,7 @@ function App() {
       <section className="animate-section">
         <h2>In View Animations</h2>
         <DecryptedText
-          text=":p"
+          text="This text animates when in view"
           animateOn="view"
           revealDirection="center"
         />
