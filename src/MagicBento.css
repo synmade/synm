@@ -12,12 +12,13 @@
 
 .card-grid {
   display: grid;
-  gap: 3rem; /* space between cards */
-  padding: 3rem;
+  gap: 2rem; /* slightly smaller gap */
+  padding: 2rem;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1200px; /* smaller max width for centered effect */
+  margin: 0 auto; /* center the grid */
+  justify-content: center; /* ensure cards are centered */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* smaller cards */
 }
 
 .card {
@@ -26,20 +27,16 @@
   justify-content: space-between;
   position: relative;
   aspect-ratio: 4/3;
-  min-height: 200px;
+  min-height: 180px; /* slightly smaller height */
+  max-width: 280px; /* constrain card width */
   width: 100%;
-  padding: 1.25em;
-  border-radius: 20px;
+  padding: 1em;
+  border-radius: 18px;
   border: 1px solid var(--purple-border);
-  background: linear-gradient(135deg, #060010, #1a001a); /* deep → dark purple */
+  background: linear-gradient(135deg, #060010, #1a001a);
   font-weight: 300;
   overflow: hidden;
   transition: all 0.3s ease;
-
-  --glow-x: 50%;
-  --glow-y: 50%;
-  --glow-intensity: 0;
-  --glow-radius: 200px;
 }
 
 .card:hover {
