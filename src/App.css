@@ -1,7 +1,7 @@
 .App {
   font-family: 'Inter', sans-serif;
   color: #fff;
-  background: linear-gradient(135deg, #1a1a1a, #333);
+  background-color: #0b0b0b; /* jet black base */
   min-height: 100vh;
 }
 
@@ -13,21 +13,47 @@
   justify-content: center;
   padding: 6rem 2rem;
   text-align: center;
+  background: linear-gradient(135deg, #0b0b0b, #1a1a1a); /* jet → midnight */
 }
 
 /* StarBorder Explore Button */
 .cta-button {
-  background: transparent; /* no background */
-  border: none; /* StarBorder handles the border */
+  background: transparent;
+  border: none; /* handled by StarBorder */
   border-radius: 8px;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   cursor: pointer;
-  color: #fff; /* text color */
+  color: #00ffff; /* cyan text */
 }
 
-/* Features & Animate Sections */
-.features, .animate-section {
+/* Features Section */
+.features {
   padding: 4rem 2rem;
   text-align: center;
+  background: #1a1a1a; /* midnight black */
+}
+
+/* Animate On View Section */
+.animate-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #262626; /* charcoal */
+}
+
+/* Optional: subtle section shadow or separator */
+section {
+  border-top: 1px solid #333; /* graphite separator */
+}
+
+/* Headings */
+h1, h2 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
