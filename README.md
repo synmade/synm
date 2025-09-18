@@ -1,2 +1,0 @@
-# synm
-synmade.
