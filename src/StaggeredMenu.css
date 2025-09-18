@@ -44,17 +44,15 @@
 }
 
 .sm-toggle {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  background: transparent;
+  position: fixed;   /* always on screen */
+  top: 20px;         /* distance from top */
+  right: 20px;       /* distance from right */
+  z-index: 10000;    /* above everything else */
+  font-size: 1.8rem; /* bigger so visible */
+  background: none;
   border: none;
   cursor: pointer;
-  color: #e9e9ef;
-  font-weight: 500;
-  line-height: 1;
-  overflow: visible;
+  color: #fff;
 }
 
 .sm-toggle:focus-visible {
