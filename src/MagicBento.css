@@ -12,13 +12,13 @@
 
 .card-grid {
   display: grid;
-  gap: 2rem; /* slightly smaller gap */
-  padding: 2rem;
+  gap: 3rem; /* slightly smaller gap */
+  padding: 3rem;
   width: 100%;
-  max-width: 1200px; /* smaller max width for centered effect */
+  max-width: 1400px; /* smaller max width for centered effect */
   margin: 0 auto; /* center the grid */
   justify-content: center; /* ensure cards are centered */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* smaller cards */
+  grid-template-columns: repeat(auto-fit, minmax(300, 1fr)); /* smaller cards */
 }
 
 .card {
