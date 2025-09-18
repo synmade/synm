@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import DecryptedText from "./DecryptedText";
-import StarBorder from "./StarBorder";
 import MagicBento from "./MagicBento";
 import "./App.css";
 
