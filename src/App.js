@@ -4,10 +4,26 @@ import DecryptedText from "./DecryptedText";
 import StarBorder from "./StarBorder";
 import "./App.css";
 
+// Layout (shared across all pages)
+function Layout({ children }) {
+  return (
+    <div className="App">
+      {/* Navbar */}
+      <nav className="navbar">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </nav>
+
+      {/* Page Content */}
+      <main>{children}</main>
+    </div>
+  );
+}
+
 // Home Page
 function Home() {
   return (
-    <div className="App">
+    <>
       {/* Hero Section */}
       <section className="hero">
         <h1>Welcome to SYNmade</h1>
@@ -47,39 +63,46 @@ function Home() {
           revealDirection="center"
         />
       </section>
-    </div>
+    </>
   );
 }
 
 // About Page
 function About() {
   return (
-    <div className="App">
-      <section className="about">
+    <>
+      <section className="hero">
         <h1>About SYNmade</h1>
         <p>
           SYNmade is a creative project exploring animations, interactivity, and
           custom web design.
         </p>
       </section>
-    </div>
+    </>
   );
 }
 
-// Main App
+// App with Routes
 function App() {
   return (
     <BrowserRouter>
-      {/* Navbar */}
-      <nav className="navbar">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
-
-      {/* Page Routes */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Layout>
+              <About />
+            </Layout>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
