@@ -51,8 +51,6 @@ function Layout({ children }) {
   );
 }
 
-export default Layout;
-
 
 // Home Page
 function Home() {
