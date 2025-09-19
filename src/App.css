@@ -28,6 +28,15 @@
   margin: 0 auto;      /* centers horizontally */
 }
 
+.welcome-section {
+  margin-bottom: 4rem; /* space below the welcome section */
+  text-align: center;  /* optional: center the FuzzyText */
+}
+
+.welcome-section > * {
+  display: inline-block; /* keeps FuzzyText from stretching full width */
+}
+
 
 /* Features Section */
 .features {
