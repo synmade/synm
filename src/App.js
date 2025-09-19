@@ -7,7 +7,6 @@ import Dither from "./Dither"; // import Dither
 //import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
 import "./App.css";
 import StaggeredMenu from "./StaggeredMenu";
-import FuzzyText from './FuzzyText';
 
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
