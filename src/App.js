@@ -37,7 +37,7 @@ function Layout({ children }) {
         }}
       >
         <Dither
-          waveColor={[0.3, 0, 0.6]}
+          waveColor={[0.2, 0, 0.5]}
           disableAnimation={false}
           enableMouseInteraction={true}
           mouseRadius={0.3}
