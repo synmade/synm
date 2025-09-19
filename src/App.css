@@ -34,7 +34,7 @@ body, .App {
 }
 
 .middle-section {
-  background: var(--background-dark); /* dark purple background */
+  background: #1a0b2e; /* dark purple background */
   padding: 4em 2em; /* space inside */
   width: 100%;
   text-align: center;
