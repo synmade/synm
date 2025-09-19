@@ -55,12 +55,6 @@
   color: var(--purple-primary); /* main purple color */
 }
 
-
-/* Optional: subtle section shadow or separator */
-section {
-  border-top: 1px solid #330044; /* purple graphite separator */
-}
-
 /* Headings */
 h1, h2 {
   margin-bottom: 1rem;
