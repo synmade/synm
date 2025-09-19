@@ -33,6 +33,26 @@ body, .App {
   margin: 0 auto;      /* centers horizontally */
 }
 
+.middle-section {
+  background: var(--background-dark); /* dark purple background */
+  padding: 4em 2em; /* space inside */
+  width: 100%;
+  text-align: center;
+}
+
+.middle-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  color: var(--purple-primary); /* accent heading */
+}
+
+.middle-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
 .welcome-section {
   margin-bottom: 4rem; /* space below the welcome section */
   text-align: center;  /* optional: center the FuzzyText */
