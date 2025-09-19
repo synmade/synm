@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from 'react';
 
 const FuzzyText = ({
   children,
-  fontSize = 'clamp(2rem, 10vw, 10rem)',
+  fontSize = 'clamp(2rem, 5vw, 5rem)',
   fontWeight = 900,
   fontFamily = 'inherit',
-  color = 'var(--purple-primary)',
+  color = '#8B5CF6',
   enableHover = true,
   baseIntensity = 0.18,
   hoverIntensity = 0.5
