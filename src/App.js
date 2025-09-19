@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import DecryptedText from "./DecryptedText";
-import MagicBento from "./MagicBento";
+// import MagicBento from "./MagicBento";
 //import Dock from "./Dock";
 import Dither from "./Dither"; // import Dither
 //import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
@@ -72,6 +72,7 @@ function Layout({ children }) {
 }
 
 // Home Page
+// Home Page
 function Home() {
   return (
     <div className="hero">
@@ -86,20 +87,11 @@ function Home() {
         </FuzzyText>
       </section>
 
-      {/* Magic Bento Section */}
-      <section className="bento-section">
-        <MagicBento
-          textAutoHide={true}
-          enableStars={true}
-          enableSpotlight={true}
-          enableBorderGlow={true}
-          enableTilt={true}
-          enableMagnetism={true}
-          clickEffect={true}
-          spotlightRadius={300}
-          particleCount={12}
-          glowColor="132, 0, 255"
-        />
+      {/* Middle Section (placeholder for where bento used to be) */}
+      <section className="middle-section">
+        <h2>Featured</h2>
+        <p>This is where the MagicBento used to be.  
+           You can add new content, cards, or visuals here later.</p>
       </section>
 
       {/* Spotify Section */}
@@ -121,8 +113,6 @@ function Home() {
     </div>
   );
 }
-
-
 // About Page
 function About() {
   return (
