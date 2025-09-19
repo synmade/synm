@@ -84,8 +84,6 @@ function Home() {
 >
   Welcome.
 </FuzzyText>
-      <DecryptedText text="Learn more about synmade below." />
-
       <MagicBento
         textAutoHide={true}
         enableStars={true}
