@@ -74,45 +74,54 @@ function Layout({ children }) {
 // Home Page
 function Home() {
   return (
-    <section className="hero">
-    
-  
-<FuzzyText 
-  baseIntensity={0.2} 
-  hoverIntensity={0.5} 
-  enableHover={true}
->
-  Welcome.
-</FuzzyText>
-      <MagicBento
-        textAutoHide={true}
-        enableStars={true}
-        enableSpotlight={true}
-        enableBorderGlow={true}
-        enableTilt={true}
-        enableMagnetism={true}
-        clickEffect={true}
-        spotlightRadius={300}
-        particleCount={12}
-        glowColor="132, 0, 255"
-      />
+    <div className="hero">
+      {/* Welcome Section */}
+      <section className="welcome-section">
+        <FuzzyText 
+          baseIntensity={0.2} 
+          hoverIntensity={0.5} 
+          enableHover={true}
+        >
+          Welcome.
+        </FuzzyText>
+      </section>
 
-     <iframe
-  title="Talking To The Robots"
-  data-testid="embed-iframe"
-  style={{ borderRadius: "12px" }}
-  src="https://open.spotify.com/embed/track/7gmszk7lYOwxQxRurFHCMd?utm_source=generator"
-  width="100%"
-  height="352"
-  frameBorder="0"
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-  allowFullScreen
-  loading="lazy"
-></iframe>
-          
-    </section>  
+      {/* Magic Bento Section */}
+      <section className="bento-section">
+        <MagicBento
+          textAutoHide={true}
+          enableStars={true}
+          enableSpotlight={true}
+          enableBorderGlow={true}
+          enableTilt={true}
+          enableMagnetism={true}
+          clickEffect={true}
+          spotlightRadius={300}
+          particleCount={12}
+          glowColor="132, 0, 255"
+        />
+      </section>
+
+      {/* Spotify Section */}
+      <section className="spotify-section">
+        <h2>Now Playing</h2>
+        <iframe
+          title="Talking To The Robots"
+          data-testid="embed-iframe"
+          style={{ borderRadius: "12px" }}
+          src="https://open.spotify.com/embed/track/7gmszk7lYOwxQxRurFHCMd?utm_source=generator"
+          width="100%"
+          height="352"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          allowFullScreen
+          loading="lazy"
+        ></iframe>
+      </section>
+    </div>
   );
 }
+
 
 // About Page
 function About() {
