@@ -75,15 +75,7 @@ function Layout({ children }) {
 function Home() {
   return (
     <section className="hero">
-      // <h1>Welcome.</h1>
-
-      <FuzzyText 
-  baseIntensity={0.2} 
-  hoverIntensity={0.5} 
-  enableHover={true}
->
-  404
-</FuzzyText>
+       <h1>Welcome.</h1>
     
       <DecryptedText text="Learn more about synmade below." />
 
