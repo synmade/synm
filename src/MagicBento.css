@@ -63,34 +63,31 @@
   flex-direction: column;
 }
 
-.card__label {
-  font-size: 16px;
-}
-
+/* Center the text inside the cards */
+.card__label,
 .card__title,
 .card__description {
-  --clamp-title: 1;
-  --clamp-desc: 2;
+  text-align: center;
 }
 
+/* Show the full title and description */
+.card--text-autohide .card__title,
+.card--text-autohide .card__description {
+  display: block;            /* override -webkit-box */
+  -webkit-line-clamp: none;  /* remove clamping */
+  line-clamp: none;
+  overflow: visible;         /* show all text */
+  text-overflow: clip;
+}
+
+/* Optional: add spacing for readability */
 .card__title {
-  font-weight: 400;
-  font-size: 16px;
-  margin: 0 0 0.25em;
+  margin-bottom: 0.5em;
 }
 
 .card__description {
-  font-size: 12px;
-  line-height: 1.2;
-  opacity: 0.9;
-}
-
-.card--text-autohide .card__title,
-.card--text-autohide .card__description {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-top: 0;
+  line-height: 1.4;
 }
 
 .card--text-autohide .card__title {
