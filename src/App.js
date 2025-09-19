@@ -89,9 +89,12 @@ function Home() {
 
       {/* Middle Section (placeholder for where bento used to be) */}
       <section className="middle-section">
-        <h2>Featured</h2>
-        <p>This is where the MagicBento used to be.  
-           You can add new content, cards, or visuals here later.</p>
+        <h2>Who I Am</h2>
+   <p>
+    I’m <strong>synmade</strong> — a creator who loves experimenting with ideas.  
+    Whether it’s making music, building Roblox games, or designing websites,  
+    I’m always pushing to learn, create, and share what inspires me.
+  </p>
       </section>
 
       {/* Spotify Section */}
