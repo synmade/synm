@@ -75,7 +75,6 @@ function Layout({ children }) {
 function Home() {
   return (
     <section className="hero">
-       <h1>Welcome.</h1>
     
   
 <FuzzyText 
