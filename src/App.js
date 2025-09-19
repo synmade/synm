@@ -96,6 +96,20 @@ function Home() {
         particleCount={12}
         glowColor="132, 0, 255"
       />
+
+       <iframe
+  data-testid="embed-iframe"
+  style={{ borderRadius: "12px" }}
+  src="https://open.spotify.com/embed/track/7gmszk7lYOwxQxRurFHCMd?utm_source=generator"
+  width="100%"
+  height="352"
+  frameBorder="0"
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+  allowFullScreen
+  loading="lazy"
+></iframe>
+
+          
     </section>  
   );
 }
