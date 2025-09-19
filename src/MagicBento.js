@@ -11,7 +11,7 @@ const cardData = [
   {
     color: '#060010',
     title: 'Who I Am',
-    description: 'I’m synmade — a creator driven by curiosity and creativity, always exploring new ways to make interactive experiences, music, and games.',
+    description: 'I’m Synmade — a creative developer and indie maker who loves blending technology with artistry. I build immersive Roblox games with custom mechanics, design interactive web experiences, and produce experimental music on the side. My work is all about turning ideas into engaging, hands-on experiences that mix coding, design, and sound. Whether I’m crafting a unique game system, animating a web interface, or experimenting with lo-fi music production, I’m always exploring new ways to create and share my vision.',
     label: 'About Me'
   },
   {
