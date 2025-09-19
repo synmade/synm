@@ -104,7 +104,7 @@ function Home() {
 
       {/* Spotify Section */}
       <section className="spotify-section">
-        <h2>Now Playing</h2>
+        <h2>Now Playing Synmade</h2>
         <iframe
           title="Talking To The Robots"
           data-testid="embed-iframe"
