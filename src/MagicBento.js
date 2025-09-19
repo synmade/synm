@@ -11,28 +11,34 @@ const cardData = [
   {
     color: '#060010',
     title: 'Who I Am',
-    description: 'I’m Synmade — a creative developer and indie maker who loves blending technology with artistry. I build immersive Roblox games with custom mechanics, design interactive web experiences, and produce experimental music on the side. My work is all about turning ideas into engaging, hands-on experiences that mix coding, design, and sound. Whether I’m crafting a unique game system, animating a web interface, or experimenting with lo-fi music production, I’m always exploring new ways to create and share my vision.',
+    description: 'Creative developer blending code, design, and music to build interactive experiences.',
     label: 'About Me'
   },
   {
     color: '#060010',
     title: 'What I Do',
-    description: 'From immersive Roblox games to dynamic websites and music projects, I craft experiences that mix technology, design, and fun.',
+    description: 'I design and build immersive Roblox games, create interactive web experiences, and produce experimental music — turning ideas into engaging, hands-on projects.',
     label: 'My Work'
   },
   // New card 1
   {
     color: '#060010',
     title: 'My Skills',
-    description: 'Proficient in React, GSAP animations, Roblox Lua, and audio production. I enjoy combining these skills into interactive and engaging projects.',
+    description: 'Proficient in JavaScript, React, Roblox Lua, and creative tools for music production and visual design. I combine coding with artistry to craft unique interactive experiences.',
     label: 'Skills'
   },
   // New card 2
   {
     color: '#060010',
     title: 'Contact Me',
-    description: 'Reach out for collaborations, projects, or just to say hi! I’m always excited to connect with fellow creators and enthusiasts.',
+    description: 'Want to collaborate or just say hi? Reach out via email, social media, or GitHub — I’m always open to new ideas and creative projects.',
     label: 'Get In Touch'
+  },
+   {
+    color: '#060010',
+    title: 'Latest Work',
+    description: 'This website is one of my latest projects — built with React, ReactBits.dev, GitHub, and Netlify to showcase my games, music, and creative work in an interactive way.',
+    label: 'This Website'
   }
 ];
 
