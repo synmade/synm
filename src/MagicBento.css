@@ -12,10 +12,10 @@
 
 .card-grid {
   display: grid;
-  gap: 2em;
-  padding: 2em;
+  gap: 4em;
+  padding: 4em;
   max-width: 54em;
-  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 2.5rem);
 }
 
 
