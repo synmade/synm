@@ -1,6 +1,11 @@
+
+body, .App {
+  color: #8B5CF6;
+}
+
+
 .App {
   font-family: 'Montserrat', sans-serif;
-  color: var(--white);
   background-color: transparent; /* allow Dither to show through */
   min-height: 100vh;
 }
