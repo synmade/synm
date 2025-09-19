@@ -15,7 +15,7 @@
   gap: 3em;
   padding: 3em;
   max-width: 54em;
-  font-size: clamp(1rem, 0.9rem + 0.5vw, 2.5rem);
+  font-size: 1rem;
 }
 
 
@@ -75,13 +75,13 @@
 
 .card__title {
   font-weight: 400;
-  font-size: 16px;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
   margin: 0 0 0.25em;
 }
 
 .card__description {
-  font-size: 12px;
-  line-height: 1.2;
+  font-size: 0.85rem;
+  line-height: 1.4;
   opacity: 0.9;
 }
 
@@ -96,11 +96,6 @@
 .card--text-autohide .card__title {
   -webkit-line-clamp: var(--clamp-title);
   line-clamp: var(--clamp-title);
-}
-
-.card--text-autohide .card__description {
-  -webkit-line-clamp: var(--clamp-desc);
-  line-clamp: var(--clamp-desc);
 }
 
 @media (max-width: 599px) {
