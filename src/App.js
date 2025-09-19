@@ -7,6 +7,7 @@ import Dither from "./Dither"; // import Dither
 //import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
 import "./App.css";
 import StaggeredMenu from "./StaggeredMenu";
+import FuzzyText from './FuzzyText';
 
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
@@ -74,7 +75,15 @@ function Layout({ children }) {
 function Home() {
   return (
     <section className="hero">
-      <h1>Welcome.</h1>
+      // <h1>Welcome.</h1>
+      <FuzzyText 
+  baseIntensity={0.2} 
+  hoverIntensity={hoverIntensity} 
+  enableHover={enableHover}
+>
+  synmade
+</FuzzyText>
+    
       <DecryptedText text="Learn more about synmade below." />
 
       <MagicBento
