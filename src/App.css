@@ -17,12 +17,15 @@
 }
 
 .bento-section {
-  width: 100vw;               /* full viewport width */
-  margin-left: calc(-50vw + 50%); /* center-align full-width sections inside centered layouts */
-  background: #0a0018;        /* solid dark purple/black background */
-  padding: 3em 1em;           /* space around the content */
-  border-radius: 0;           /* remove rounded corners for banner look */
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: #0a0018;
+  padding: 3em 1em;
+}
+
+.bento-section > * {
+  max-width: 1200px;   /* keeps content readable */
+  margin: 0 auto;      /* centers horizontally */
 }
 
 
