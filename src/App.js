@@ -76,12 +76,10 @@ function Home() {
   return (
     <section className="hero">
       // <h1>Welcome.</h1>
-      <FuzzyText 
-  baseIntensity={0.2} 
-  hoverIntensity={hoverIntensity} 
-  enableHover={enableHover}
->
-  synmade
+
+    <FuzzyText baseIntensity={0.2} hoverIntensity={0.5} enableHover={true}>
+    // text here
+    Welcome.
 </FuzzyText>
     
       <DecryptedText text="Learn more about synmade below." />
