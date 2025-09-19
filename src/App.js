@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DecryptedText from "./DecryptedText";
+//import DecryptedText from "./DecryptedText";
 import MagicBento from "./MagicBento";
 //import Dock from "./Dock";
 import Dither from "./Dither"; // import Dither
